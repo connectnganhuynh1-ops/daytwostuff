@@ -1,4 +1,9 @@
 # %%
+import pandas as pd
+df = pd.read_csv("Chocolate Sales (2).csv")
+print(df.head())
+
+# %%
 # 1) What is your terminal display "path"? (type/paste as text into the .py file)
 # /workspaces/daytwostuff
 # 2) Should you include the environment in your repo or not?
