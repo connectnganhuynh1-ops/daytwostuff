@@ -1,24 +1,21 @@
-#%% 
+# %% 
 import pandas as pd
 import numpy as np  
-from sodapy import Socrata
+from sodapy import Socrata 
 import folium
 from folium import plugins
-#%%
-
-
+# %%
 # Unauthenticated client only works with public data sets. Note 'None'
 # in place of application token, and no username or password:
 client = Socrata("data.cityofnewyork.us", None)
 
 # Example authenticated client (needed for non-public datasets):
 #client = Socrata(data.cityofnewyork.us,
-#                  M11sfgjfqs150cq0s4p5e1sdkcqkztpgk5re4xke0pbpfuu15fm,
+#                  "insert key",
 #                 username="brianwright@virginia.edu",
 #                 password= "RoseRivers@301")
 
-
-#%%
+# %%
 # First 2000 results, returned as JSON from API / converted to Python list of
 # dictionaries by sodapy.
 results = client.get("vfnx-vebw", limit=2000)
